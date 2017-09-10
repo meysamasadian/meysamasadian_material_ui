@@ -2,7 +2,7 @@
   "name": "material-ui-meysamasadian",
   "private": false,
   "author": "meysam asadian",
-  "version": "0.0.1-beta",
+  "version": "0.0.3-beta",
   "description": "Material Design UI components built with React",
   "main": "./src/index.js",
   "keywords": [
@@ -13,10 +13,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/callemall/material-ui.git"
-  },
-  "bugs": {
-    "url": "https://github.com/callemall/material-ui/issues"
+    "url": "git+https://github.com/meysamasadian/meysamasadian_material_ui.git"
   },
   "scripts": {
     "build": "npm run build:icon-index && npm run build:babel && npm run build:copy-files",
@@ -101,5 +98,15 @@
     "rimraf": "^2.5.3",
     "sinon": "^1.17.3",
     "webpack": "^1.13.1"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/meysamasadian/meysamasadian_material_ui/issues"
+  },
+  "homepage": "https://github.com/meysamasadian/meysamasadian_material_ui#readme",
+  "directories": {
+    "doc": "docs",
+    "example": "examples",
+    "test": "test"
+  },
+  "license": "ISC"
 }
