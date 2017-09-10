@@ -16,12 +16,11 @@
     "url": "git+https://github.com/meysamasadian/meysamasadian_material_ui.git"
   },
   "scripts": {
-    "build": "npm run build:icon-index && npm run build:babel && npm run build:copy-files",
-    "build:icon-index": "babel-node ./scripts/icon-index-generator.js",
-    "build:babel": "NODE_ENV=release babel ./src --out-dir ./build --ignore spec.js",
+    "build": "npm run build:babel && npm run build:copy-files",
+    "build:babel": "babel ./src --ignore *.spec.js --out-dir ./build",
     "build:copy-files": "babel-node ./scripts/copy-files.js",
     "clean:build": "rimraf build",
-    "lint": "eslint src docs/src test --quiet && echo \"eslint: no lint errors\"",
+    "lint": "eslint src docs/src test/integration && echo \"eslint: no lint errors\"",
     "lint:find-rules": "eslint-find-rules -u .eslintrc.js",
     "prebuild": "npm run clean:build",
     "test": "cross-env NODE_ENV=test babel-node test/index.js",
@@ -30,7 +29,8 @@
     "test:integration": "cross-env NODE_ENV=test babel-node test/index.js integration",
     "test:integration:watch": "cross-env NODE_ENV=test babel-node test/watch.js integration",
     "test:unit": "cross-env NODE_ENV=test babel-node test/index.js unit",
-    "test:unit:watch": "cross-env NODE_ENV=test babel-node test/watch.js unit"
+    "test:unit:watch": "cross-env NODE_ENV=test babel-node test/watch.js unit",
+    "publish": "npm run prebuild && npm run build && npm publish ./build --registry http://10.20.11.67:8081/nexus/content/repositories/npm-private/"
   },
   "peerDependencies": {
     "react": "^15.0.0",
