@@ -2,7 +2,7 @@
   "name": "material-ui-meysamasadian",
   "private": false,
   "author": "meysam asadian",
-  "version": "1.0.0-alpha",
+  "version": "0.0.0.1-alpha",
   "description": "Material Design UI components built with React",
   "main": "./src/index.js",
   "keywords": [
